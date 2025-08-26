@@ -4,9 +4,11 @@ using MinimalApi.DTOs;
 
 namespace Test.Mocks;
 
-public class AdministradorServicoMock : IAdministradorServico
+public class AdministradoresServicoMock : IAdministradorServico
 {
-    private static List<Administrador> administradores = new List<Administrador>(){
+
+    private static List<Administrador> administradores = new List<Administrador>()
+    {
         new Administrador{
             Id = 1,
             Email = "adm@teste.com",
@@ -20,7 +22,6 @@ public class AdministradorServicoMock : IAdministradorServico
             Perfil = "Editor"
         }
     };
-
     public Administrador? BuscaPorId(int id)
     {
         return administradores.Find(a => a.Id == id);
@@ -44,3 +45,5 @@ public class AdministradorServicoMock : IAdministradorServico
         return administradores;
     }
 }
+
+// Criar do veiculo
